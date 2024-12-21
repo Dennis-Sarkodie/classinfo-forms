@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .table-container .table {
+            width: 48%; /* Adjust table width to fit side by side */
+        }
+
+        .custom-border {
+            border: 5px solid #000; /* Adjust the thickness of the border */
+        }
+    </style>
+</head>
+<body>
+<section class="custom-border p-3 mb-3" style="height: 200px; background-color: #8faac4; font-family:fantasy">
+    <h1 class="text-center">Class Details Tables</h1>
+    <h1 class="text-center">&</h1>
+    <h1 class="text-center">Customer Registration Form</h1>
+
+</section>
+
+<div class="container mb-5">
+    <h2>Class Details Tables</h2>
+    <div class="table-container">
+        <!-- First Table -->
+        <table class="table table-bordered">
+            <thead class="table-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-secondary">
+                    <td>John Doe</td>
+                    <td>1234567890</td>
+                    <td>Male</td>
+                </tr>
+                <tr class="table-primary">
+                    <td>Jane Smith</td>
+                    <td>0987654321</td>
+                    <td>Female</td>
+                </tr>
+                <tr class="table-secondary">
+                    <td>Samuel Green</td>
+                    <td>1231231234</td>
+                    <td>Male</td>
+                </tr>
+                <tr class="table-primary">
+                    <td>Linda Johnson</td>
+                    <td>4321432143</td>
+                    <td>Female</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Second Table -->
+        <table class="table table-bordered">
+            <thead class="table-success">
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-secondary">
+                    <td>Michael Brown</td>
+                    <td>5678567856</td>
+                    <td>Male</td>
+                </tr>
+                <tr class="table-primary">
+                    <td>Emily White</td>
+                    <td>8765876587</td>
+                    <td>Female</td>
+                </tr>
+                <tr class="table-secondary">
+                    <td>David Black</td>
+                    <td>1234567890</td>
+                    <td>Male</td>
+                </tr>
+                <tr class="table-primary">
+                    <td>Susan Blue</td>
+                    <td>0987654321</td>
+                    <td>Female</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<section>
+    <div class="container mb-5">
+        <h2>Customer Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea class="form-control" id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="male" name="gender" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="female" name="gender" value="female" required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="other" name="gender" value="other" required>
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Business Category:</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="retail" name="business_category" value="retail">
+                    <label class="form-check-label" for="retail">Retail</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="wholesale" name="business_category" value="wholesale">
+                    <label class="form-check-label" for="wholesale">Wholesale</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="services" name="business_category" value="services">
+                    <label class="form-check-label" for="services">Services</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="manufacturing" name="business_category" value="manufacturing">
+                    <label class="form-check-label" for="manufacturing">Manufacturing</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="customer_type">Customer Type:</label>
+                <select class="form-control" id="customer_type" name="customer_type" required>
+                    <option value="" disabled selected>Select a type</option>
+                    <option value="new">New</option>
+                    <option value="returning">Returning</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>    
+</section>
+
+<hr>
+
+<footer class="container">
+    <p>&copy; 2024 Projects.</p>
+</footer>
+
+</body>
+</html>
